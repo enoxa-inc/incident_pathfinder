@@ -1,10 +1,11 @@
 # Incident Pathfinder
 
 **Ask what happened. Find the evidence. Follow the runbook.**
-*Incident Pathfinder powered by Gatepath*
+*Incident Pathfinder powered by [Gatepath](https://gatepath.jp/)*
 
 - Demo video: https://www.youtube.com/watch?v=zXQyL2b_z2U
 - Live app: https://b3t1swuh0g.execute-api.us-east-1.amazonaws.com/
+- Gatepath: https://gatepath.jp/
 
 ## 1. What is Incident Pathfinder?
 
@@ -81,6 +82,9 @@ The agent only calls the tools a question needs (for example "What should I do?"
 the incident already identified in the session).
 
 ## 6. Gatepath integration
+
+[Gatepath](https://gatepath.jp/) connects Slack, Jira, Confluence, Google Drive, SharePoint and other workplace
+tools behind one permission-aware search, and exposes it to AI assistants as an MCP server.
 
 Gatepath already runs as an MCP server and is used here as an existing backend service for enterprise
 knowledge, not as the Alexa+ Track's required MCP server (see section 4). Incident Pathfinder is an

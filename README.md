@@ -144,6 +144,13 @@ a Slack report of authentication failures, the Jira ticket for the change, and a
 2. **What changed?** → session context + `search_gatepath` (Jira / Slack)
 3. **What should I do?** → session context + `get_runbook` (Confluence) — ends with the read-only policy
 
+**Note on evidence.** Amazon Bedrock chooses the Gatepath search keywords on every turn, so the evidence list
+can differ between runs of the same question. Gatepath returns only documents that contain every search term:
+if the model adds one more word (for example "middleware"), the Confluence runbook can drop out of the
+"What happened?" answer, which then shows two sources (Jira and Slack) instead of three. The runbook is still
+retrieved when you ask "What should I do?". We kept the model in control of the search rather than hard-coding
+queries.
+
 ## 10. How to run
 
 Local (uses real Bedrock and the real Gatepath MCP server):
